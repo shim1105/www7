@@ -1,0 +1,20 @@
+
+<div class="w3-container">
+    <h2> 부서 등록</h2>
+    <div class="w3-card-4">
+    <div class="w3-container w3-brown">
+      <h2>등록하세요</h2>
+    </div>
+  </div>>
+      <p>      
+      <label class="w3-text-brown"><b>부서 코드</b></label>
+      <input class="w3-input" type="number" max="999" maxlength="3" min="101" [(ngModel)]="depts.departmentCode"></p>
+      <p>      
+      <label class="w3-text-brown"><b>부서 이름</b></label>
+      <input class="w3-input" type="text" maxlength="30"  [(ngModel)]="depts.departmentName"></p>
+      <p>
+      <label class="w3-text-brown"><b>부서상세</b></label>
+      <textarea class="w3-input " maxlength="100"    [(ngModel)]="depts.departmentDescription"></textarea></p>
+      <p>
+      <button class="w3-btn w3-brown" (click)="insert()">등록</button></p>
+</div>

@@ -1,0 +1,51 @@
+
+<div class="w3-container">
+    <h2> 사원 등록</h2>
+    <div class="w3-card-4">
+    <div class="w3-container w3-brown">
+      <h2>등록하세요</h2>
+    </div>
+  </div>>
+      <p>      
+      <label class="w3-text-brown"><b>사원 번호</b></label>
+      <input class="w3-input" type="number" max="99999999" id="employeeNo" [(ngModel)]="emp.employeeNo"></p>
+      <p>      
+      <label class="w3-text-brown"><b>사원 이름</b></label>
+      <input class="w3-input" type="text" id="employeeName" [(ngModel)]="emp.employeeName"></p>
+      <p>
+      <label class="w3-text-brown"><b>사원 비밀번호</b></label>
+      <input class="w3-input"  type="password" id="employeePassword" [(ngModel)]="emp.employeePassword"></p>
+      <p>
+      <label class="w3-text-brown"><b>개인 연락처</b></label>
+      <input class="w3-input" maxlength="11" type="text" id="personalContact" [(ngModel)]="emp.personalContact"></p>
+      <p>
+      <label class="w3-text-brown"><b>내선 번호</b></label>
+      <input class="w3-input " maxlength="4" type="text" id="extensionNumber" [(ngModel)]="emp.extensionNumber"></p>
+      <p>
+      <label class="w3-text-brown"><b>사원 이메일</b></label>
+      <input class="w3-input "  type="email" id="employeeEmail" [(ngModel)]="emp.employeeEmail"></p>
+      <p>
+      <label class="w3-text-brown"><b>생년월일</b></label>
+      <input class="w3-input "  type="number" max="99999999" id="employeeBirth" [(ngModel)]="emp.employeeBirth"></p>
+      <p>
+      <label class="w3-text-brown"><b>최종학력상태</b></label>
+      <input class="w3-input"  type="text" id="finalEducationState" [(ngModel)]="emp.finalEducationState"></p>
+      <p>
+      <label class="w3-text-brown"><b>최종학력</b></label>
+      <input class="w3-input "  type="text" id="finalEducation" [(ngModel)]="emp.finalEducation"></p>
+      <p>
+      <label class="w3-text-brown"><b>은행명</b></label>
+      <input class="w3-input "  type="text" id="employeeBankName" [(ngModel)]="emp.employeeBankName"></p>
+      <p>
+      <label class="w3-text-brown"><b>계좌번호</b></label>
+      <input class="w3-input " type="text"  id="employeeBankCode" [(ngModel)]="emp.employeeBankCode"></p>
+      <p>
+      <label class="w3-text-brown"><b>입사일</b></label>
+      <input class="w3-input"  type="date" maxlength="8" id="dateOfEntry" [(ngModel)]="emp.dateOfEntry"></p>
+      <p>
+      <label class="w3-text-brown"><b>파일</b></label>
+      <input class="w3-input"  type="file" (change)="getFiles($event)"></p>  
+      <p>
+      <button class="w3-btn w3-brown" (click)="insert(emp)">Register</button></p>
+
+</div>

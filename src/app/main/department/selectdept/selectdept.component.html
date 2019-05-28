@@ -1,0 +1,27 @@
+<div class="w3-container">
+    <h2>부서 Table</h2>
+    <p>수정 및 삭제 할 사워의 부서를 눌러 주세요</p>
+    <table class="w3-table-all w3-hoverable">
+      <thead>
+        <tr class="w3-light-grey">
+          <th>부서 코드</th>
+          <th>부서 이름</th>
+          <th>상위 부서코드</th>
+          <th>사용 구분</th>
+
+          
+        </tr>
+      </thead>
+      <tr *ngIf ="depts.length==0 && !depts">
+        <td colspan="7">조회된 내용이 없습니다.</td>
+      </tr>
+      <tr *ngFor="let dept of depts" (click)="goPage('updatedept/'+dept.departmentCode)">
+        <td>{{dept.departmentCode}}</td>
+        <td>{{dept.departmentName}}</td>
+        <td>{{dept.departmentParentCode}}</td>
+        <td>{{dept.departmentActivation}}</td>
+        
+      </tr>
+      
+    </table>
+  </div>

@@ -1,0 +1,20 @@
+
+<div class="w3-container w3-blue">
+  <h2>Input Form</h2>
+</div>
+
+<div class="w3-container">
+  <p>
+  <label>아이디</label>
+  <input class="w3-input" type="text" [(ngModel)]="us.uiId"></p>
+  <p>
+  <label>비밀번호</label>
+  <input class="w3-input" type="password" [(ngModel)]="us.uiPwd"></p>
+  <p>
+  <label>보안 문자</label>
+  <input class="w3-input" type="text"></p>
+
+  <button (click)="doLogin()">로그인</button>
+  </div>
+
+

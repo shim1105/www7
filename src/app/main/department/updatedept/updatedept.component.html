@@ -1,0 +1,26 @@
+<div class="w3-container" *ngFor="let depts of dept">
+        <h2> 부서 수정및 삭제</h2>
+        <div class="w3-card-4">
+            <div class="w3-container w3-brown">
+              <h2>수정하세요</h2>
+            </div>
+        </div>
+        <p>      
+        <label class="w3-text-brown"><b>부서 코드</b></label>
+        <input class="w3-input" type="number" readonly  [(ngModel)]="depts.departmentCode"></p>
+        <p>      
+        <label class="w3-text-brown"><b>부서 이름</b></label>
+        <input class="w3-input" type="text"  [(ngModel)]="depts.departmentName"></p>
+        <p>
+        <label class="w3-text-brown"><b>상위 부서 코드</b></label>
+        <input class="w3-input"  type="number" [(ngModel)]="depts.departmentParentCode"></p>
+        <p>
+        <label class="w3-text-brown"><b>사용 구분</b></label>
+        <input class="w3-input" maxlength="1" type="text"  [(ngModel)]="depts.departmentActivation"></p>
+        <p>
+        <label class="w3-text-brown"><b>부서 상세</b></label>
+        <textarea class="w3-input " maxlength="100"   [(ngModel)]="depts.departmentDescription"></textarea></p>
+        <p>
+        <button class="w3-btn w3-brown" (click)="update(depts)">수정</button>
+        <button class="w3-btn w3-brown" (click)="delete()">삭제</button></p>
+    </div>  
